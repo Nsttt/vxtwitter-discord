@@ -25,7 +25,7 @@ client.on("message", (msg) => {
       .awaitReactions(filter, { max: 1, time: 60000, errors: ["time"] })
       .then(() => {
         msg.delete({ timeout: "1000" });
-        msg.channel.send(url.href);
+        msg.channel.send(`From ${msg.author} | ${url.href}`);
       });
   }
 });
