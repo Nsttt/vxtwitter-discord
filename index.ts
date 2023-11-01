@@ -26,6 +26,8 @@ client.on("messageCreate", async (message) => {
     (_match, _p1, _p2, p3) => `https://vxtwitter.com${p3}`
   );
 
+  if (alteredMessage === message.content) return;
+
   await message.channel.send(alteredMessage);
 });
 
