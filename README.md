@@ -1,34 +1,34 @@
-# fxTwitter bot
+# Discord Bot
 
-Just a quick implementation of [fxtwitter](https://github.com/robinuniverse/twitfix) as a Discord bot.
+This is a Discord bot built with Node.js and TypeScript.
 
-## Installation
+## Getting Started
 
-Use the package manager `npm` or `yarn`.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-```bash
-yarn/npm install 
+### Prerequisites
+
+- [Node.js](https://nodejs.org/)
+- [Docker](https://www.docker.com/)
+- [Docker Compose](https://docs.docker.com/compose/)
+
+### Setup
+
+1.  Clone the repository to your local machine:
+2.  Create a `.env` file in the project root to store your environment variables, such as your Discord token:
+
+```
+DISCORD_TOKEN=your-discord-token
 ```
 
-Create a `.env` file with your discord bot token. You'll need to create one at [Discord Developer Portal](https://discord.com/developers).
-Use `.env.example` as a template.
+3.  Build the Docker image for your project
 
-## Usage
-
-Just run the program with node.
-
-```bash
-yarn/npm start 
+```
+docker compose build
 ```
 
-To start in development.
-```bash
-yarn/npm dev 
+4.  Start the Docker container using Docker Compose
+
 ```
-
-
-## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-## License
-[MIT](LICENSE)
+docker compose up -d
+```
