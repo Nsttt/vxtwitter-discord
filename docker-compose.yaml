@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+  fxtwitter-bot:
+    build:
+      context: .
+      args:
+        - DISCORD_TOKEN=${DISCORD_TOKEN}
+    environment:
+      - DISCORD_TOKEN=${DISCORD_TOKEN}
