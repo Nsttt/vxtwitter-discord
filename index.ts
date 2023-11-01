@@ -20,13 +20,16 @@ client.once(Events.ClientReady, (c) =>
 
 client.on("messageCreate", async (message) => {
   if (message.author.bot) return;
-
+  if (!message.content.match(urlRegex)) return;
   const alteredMessage = message.content.replace(
     urlRegex,
     (_match, _p1, _p2, p3) => `https://vxtwitter.com${p3}`
   );
 
   if (alteredMessage === message.content) return;
+
+  console.log(`Original Message: ${message.content}`);
+  console.log(`New Message: ${alteredMessage}`);
 
   await message.channel.send(alteredMessage);
 });
