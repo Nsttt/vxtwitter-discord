@@ -1,7 +1,6 @@
 {
   "name": "fxtwitter",
   "version": "1.0.0",
-  "main": "index.js",
   "license": "MIT",
   "type": "module",
   "scripts": {
@@ -9,16 +8,12 @@
     "start": "tsx index.ts"
   },
   "dependencies": {
-    "@discordjs/core": "^1.0.1",
-    "@discordjs/rest": "^2.0.1",
-    "@discordjs/ws": "^1.0.1",
     "discord.js": "^14.13.0",
     "dotenv": "^16.3.1"
   },
   "devDependencies": {
     "@types/node": "^20.8.10",
     "discord-api-types": "^0.37.62",
-    "tsup": "^7.2.0",
     "tsx": "^3.14.0",
     "typescript": "^5.2.2"
   }
