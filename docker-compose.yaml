@@ -8,3 +8,6 @@ services:
         - DISCORD_TOKEN=${DISCORD_TOKEN}
     environment:
       - DISCORD_TOKEN=${DISCORD_TOKEN}
+    restart: unless-stopped
+
+
