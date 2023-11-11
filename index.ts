@@ -1,5 +1,4 @@
 import "dotenv/config";
-
 import { Client, Events, IntentsBitField } from "discord.js";
 
 const client = new Client({
@@ -12,7 +11,7 @@ const client = new Client({
 });
 
 const urlRegex =
-  /https?:\/\/(www\.)?(twitter\.com|x\.com)\/i\/status\/([a-zA-Z0-9:%._\+~#?&//=]*)/g;
+  /https?:\/\/(www\.)?(twitter\.com|x\.com)(\/[a-zA-Z0-9_]+\/status\/\d+)/g;
 
 client.once(Events.ClientReady, (c) =>
   console.log(`Ready! Logged in as ${c.user.tag}`)
