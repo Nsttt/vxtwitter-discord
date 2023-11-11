@@ -12,7 +12,7 @@ const client = new Client({
 });
 
 const urlRegex =
-  /https?:\/\/(www\.)?(twitter\.com|x\.com)([a-zA-Z0-9/:%._\+~#?&//=]*)/g;
+  /https?:\/\/(www\.)?(twitter\.com|x\.com)\/i\/status\/([a-zA-Z0-9:%._\+~#?&//=]*)/g;
 
 client.once(Events.ClientReady, (c) =>
   console.log(`Ready! Logged in as ${c.user.tag}`)
@@ -21,10 +21,7 @@ client.once(Events.ClientReady, (c) =>
 client.on("messageCreate", async (message) => {
   if (message.author.bot) return;
 
-  if (!message.content.match(urlRegex)) {
-    console.warn("No twitter links found");
-    return;
-  }
+  if (!message.content.match(urlRegex)) return;
 
   const alteredMessage = message.content.replace(
     urlRegex,
